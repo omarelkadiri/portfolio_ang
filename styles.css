@@ -1079,4 +1079,45 @@ footer {
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+
+/* Bouton flottant pour retourner à l'hyperdocs */
+.back-to-hyperdocs {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 15px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.3);
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+.back-to-hyperdocs i {
+    font-size: 1.2rem;
+}
+
+.back-to-hyperdocs:hover {
+    transform: translateY(-5px);
+    background-color: #0cff0c;
+    box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .back-to-hyperdocs {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+    }
+    
+    .back-to-hyperdocs span {
+        display: none;
+    }
 } 
